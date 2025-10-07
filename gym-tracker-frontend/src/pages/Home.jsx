@@ -6,6 +6,7 @@ function Home() {
   const [editingId, setEditingId] = useState(null);
   const [editFields, setEditFields] = useState({ name: "", sets: 0, reps: 0, weight: 0 });
 
+  //URL API
   const API_URL = import.meta.env.VITE_API_URL;
 
   // Carica i workout dal backend
