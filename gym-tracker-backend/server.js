@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import workoutRoutes from "./routes/workoutRoutes.js"; 
+import routineRoutes from "./routes/routineRoutes.js"; 
+import exerciseRoutes from "./routes/exerciseRoutes.js"; 
 
 dotenv.config();
 const app = express();
@@ -11,7 +13,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/api/workouts", workoutRoutes); 
+app.use("/api/workouts", workoutRoutes);
+app.use("/api/routines", routineRoutes);
+app.use("/api/exercises", exerciseRoutes); 
 
 // Test route
 app.get("/", (req, res) => {

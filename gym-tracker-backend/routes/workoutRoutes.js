@@ -2,6 +2,7 @@ import express from "express";
 
 import { 
     getWorkouts, 
+    getWorkoutById,
     createWorkout, 
     updateWorkout, 
     deleteWorkout 
@@ -10,6 +11,7 @@ import {
 const router = express.Router(); 
 
 router.get("/", getWorkouts); 
+router.get("/:id", getWorkoutById); 
 router.post("/", createWorkout); 
 router.put("/:id", updateWorkout); 
 router.delete("/:id", deleteWorkout); 
