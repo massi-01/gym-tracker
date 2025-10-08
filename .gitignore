@@ -6,7 +6,7 @@ build/
 *.log
 
 # Backend
-backend/node_modules/
+gym-tracker-backend/node_modules/
 
 # Frontend
 frontend/node_modules/
