@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import Routine from "./pages/Routine.jsx";
 import Exercises from "./pages/Exercises.jsx";
+import RoutineDetail from "./pages/RoutineDetail.jsx";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/routine" element={<Routine />} />
         {/* se volessi un redirect automatico */}
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/routines/:id" element={<RoutineDetail />} />
+        <Route path="/routines/new" element={<RoutineDetail />} />
       </Routes>
     </Router>
   );
